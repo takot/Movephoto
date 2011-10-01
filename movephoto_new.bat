@@ -3,7 +3,7 @@ REM $Id: movephoto_new.bat,v 1.2 2011/08/27 12:26:44 takot Exp $;
 set MYDOCUMENTS=%USERPROFILE%\My Documents
 set MYPICTURES=%MYDOCUMENTS%\My Pictures
 pushd \
-for %%d in (G F E) do (
+for %%d in (G F E D) do (
   if exist %%d:\ (
     %%d:
     for %%f in (PENTX MLT19 KK340 CANON RICOH) do (
@@ -37,6 +37,9 @@ for %%d in (G F E) do (
         move /-Y *.jpg "%MYPICTURES%\dsc\WX340K"
       )
       popd
+    )
+    if exist status.rcl (
+      move /-Y *.avi "%MYPICTURES%\dsc\recolo1"
     )
   )
 )
