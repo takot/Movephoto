@@ -11,17 +11,17 @@ for %%d in (G F E D) do (
         if exist \DCIM\%%p%%f\ (
           pushd \DCIM\%%p%%f
           if PENTX==%%f (
-             if %ERRORLEVEL% equ 0 (
-            move /-Y *.JPG "%MYPICTURES%\dsc\K10D5"
-             )
+            if %ERRORLEVEL% equ 0 (
+              move /-Y *.JPG "%MYPICTURES%\dsc\K10D5"
+            )
           ) else if KK340==%%f (
             if %ERRORLEVEL% equ 0 (
-            copy /-Y *.jpg "%MYPICTURES%\dsc\WX340K"
+              copy /-Y *.jpg "%MYPICTURES%\dsc\WX340K"
             )
           ) else if MLT19==%%f (
             if %ERRORLEVEL% equ 0 (
-            move /-Y *.JPG "%MYPICTURES%\dsc\100MLT19"
-            move /-Y *.MOV "%MYPICTURES%\dsc\100MLT19"
+              move /-Y *.JPG "%MYPICTURES%\dsc\100MLT19"
+              move /-Y *.MOV "%MYPICTURES%\dsc\100MLT19"
             )
           )
           popd
